@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['emgrecordableclass_165',['EMGRecordableClass',['../namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5ad1ee725ac80d43af263f6ce5ef79515f',1,'vrs']]],
   ['empty_166',['EMPTY',['../namespacevrs.html#ae73984aca85d0aa7b6f3406cd9f2f6eaaba2b45bdc11e2a4a6e86aab2ac693cbb',1,'vrs']]],
   ['emptyblockreader_167',['EmptyBlockReader',['../classvrs_1_1_empty_block_reader.html',1,'vrs']]],
   ['emptydatalayout_168',['EmptyDataLayout',['../classvrs_1_1_empty_data_layout.html',1,'vrs']]],
