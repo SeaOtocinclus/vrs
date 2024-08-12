@@ -85,17 +85,19 @@ Inheritance diagram for vrs::WriteFileHandler:</div>
  <div class="center">
   <img src="classvrs_1_1_write_file_handler.png" usemap="#vrs::WriteFileHandler_map" alt=""/>
   <map id="vrs::WriteFileHandler_map" name="vrs::WriteFileHandler_map">
-<area href="classvrs_1_1_file_handler.html" title="Class to abstract VRS file system operations, to enable support for alternate storage methods,..." alt="vrs::FileHandler" shape="rect" coords="0,56,131,80"/>
-<area href="classvrs_1_1_file_delegator.html" title="Class to abstract the delegate file open operation for VRS file." alt="vrs::FileDelegator" shape="rect" coords="0,0,131,24"/>
-<area href="classvrs_1_1_disk_file.html" title="FileHandler implementation for disk files, with chunked file support." alt="vrs::DiskFile" shape="rect" coords="0,168,131,192"/>
-<area href="classvrs_1_1_atomic_disk_file.html" alt="vrs::AtomicDiskFile" shape="rect" coords="0,224,131,248"/>
+<area href="classvrs_1_1_file_handler.html" title="Class to abstract VRS file system operations, to enable support for alternate storage methods,..." alt="vrs::FileHandler" shape="rect" coords="0,56,169,80"/>
+<area href="classvrs_1_1_file_delegator.html" title="Class to abstract the delegate file open operation for VRS file." alt="vrs::FileDelegator" shape="rect" coords="0,0,169,24"/>
+<area href="classvrs_1_1_disk_file_t.html" title="FileHandler implementation for disk files, with chunked file support." alt="vrs::DiskFileT&lt; FileChunk &gt;" shape="rect" coords="0,168,169,192"/>
+<area href="classvrs_1_1_atomic_disk_file.html" alt="vrs::AtomicDiskFile" shape="rect" coords="0,224,169,248"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a91518076bc2908a1a4b21aace0fe79cf"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvrs_1_1_write_file_handler.html#a91518076bc2908a1a4b21aace0fe79cf">create</a> (const string &amp;newFilePath)=0</td></tr>
-<tr class="separator:a91518076bc2908a1a4b21aace0fe79cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5271bfd7ee63339b86b4e94ad213a08"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvrs_1_1_write_file_handler.html#af5271bfd7ee63339b86b4e94ad213a08">create</a> (const <a class="el" href="structvrs_1_1_file_spec.html">FileSpec</a> &amp;spec)</td></tr>
+<tr class="separator:af5271bfd7ee63339b86b4e94ad213a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8a6dce9aa800c50bc586d29235cac31"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvrs_1_1_write_file_handler.html#aa8a6dce9aa800c50bc586d29235cac31">create</a> (const string &amp;newFilePath, const map&lt; string, string &gt; &amp;options={})=0</td></tr>
+<tr class="separator:aa8a6dce9aa800c50bc586d29235cac31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff0f64ed8b7ada9f6e0a2c55d3fd3a59"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvrs_1_1_write_file_handler.html#aff0f64ed8b7ada9f6e0a2c55d3fd3a59">createSplitFile</a> (const <a class="el" href="structvrs_1_1_file_spec.html">FileSpec</a> &amp;spec, const string &amp;initialFilePath)</td></tr>
 <tr class="separator:aff0f64ed8b7ada9f6e0a2c55d3fd3a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42d388f28fa2202dc18ab52964d7990c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvrs_1_1_write_file_handler.html#a42d388f28fa2202dc18ab52964d7990c">reopenForUpdatesSupported</a> () const =0</td></tr>
@@ -208,10 +210,12 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>CacheStatsCallbackFu
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classvrs_1_1_write_file_handler.html" title="The WriteFileHandler interface adds write operations to the FileHandler interface.">WriteFileHandler</a> interface adds write operations to the <a class="el" href="classvrs_1_1_file_handler.html" title="Class to abstract VRS file system operations, to enable support for alternate storage methods,...">FileHandler</a> interface. </p>
-<p>There are two types of <a class="el" href="classvrs_1_1_write_file_handler.html" title="The WriteFileHandler interface adds write operations to the FileHandler interface.">WriteFileHandler</a> implementations. They might be able to:</p><ul>
-<li>create files, which which case the <a class="el" href="classvrs_1_1_write_file_handler.html#a91518076bc2908a1a4b21aace0fe79cf">create()</a> API should be implemented.</li>
-<li>modify an existing file, in which case <a class="el" href="classvrs_1_1_write_file_handler.html#a92afff70611d619395c027f01de60c6e">reopenForUpdates()</a> gives write access. Some class of cloud storage are immutable, hence the important distinction. VRS' <a class="el" href="classvrs_1_1_disk_file.html" title="FileHandler implementation for disk files, with chunked file support.">DiskFile</a> offers the most comprehensive implementation, because it is designed to fit all the needs of advanced VRS file creations, with chunking, but it should be perfectly usable on its own. On the other hand, network <a class="el" href="classvrs_1_1_write_file_handler.html" title="The WriteFileHandler interface adds write operations to the FileHandler interface.">WriteFileHandler</a> implementations might have very specific behaviors designed to accommodate the specificities of the network storage they implement. In particular, they might have specific behaviors to handle VRS file creation in the cloud, which requires the first part of the file to be edited last (and probably uploaded last too). Therefore, network <a class="el" href="classvrs_1_1_write_file_handler.html" title="The WriteFileHandler interface adds write operations to the FileHandler interface.">WriteFileHandler</a> implementations might not be usable for anything else than VRS file creation. </li>
+<p>There are two classes of <a class="el" href="classvrs_1_1_write_file_handler.html" title="The WriteFileHandler interface adds write operations to the FileHandler interface.">WriteFileHandler</a> implementations:</p><ul>
+<li>the ones that can edit data already written, whether editing a previously created file, or while creating a new one, as typically possible with local files,</li>
+<li>the immutable kind, which don't allow for overwriting parts of the file already written. They can append content, maybe concatenate chunks, but not modify previously written content. That's a typical restriction for cloud storage systems.</li>
 </ul>
+<p>VRS' DiskFile offers the most comprehensive implementation, because it is designed to fit all the needs of advanced VRS file creations, with chunking, but it can be used with non-VRS files.</p>
+<p>On the other hand, network <a class="el" href="classvrs_1_1_write_file_handler.html" title="The WriteFileHandler interface adds write operations to the FileHandler interface.">WriteFileHandler</a> implementations often have very specific behaviors designed to accommodate the specificities of the network storage they implement. These implementation details should ideally be abstracted, but in order to optimize cloud VRS file creation, the abstraction is compromised, and cloud <a class="el" href="classvrs_1_1_write_file_handler.html" title="The WriteFileHandler interface adds write operations to the FileHandler interface.">WriteFileHandler</a> implementations are not easily reusable for other applications that VRS. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="acc15477a0e4cac5307cd4d97ba9f94c9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acc15477a0e4cac5307cd4d97ba9f94c9">&#9670;&nbsp;</a></span>addChunk()</h2>
@@ -237,12 +241,39 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>CacheStatsCallbackFu
 </div><div class="memdoc">
 <p>Append a new chunk to the current file, when in writing to disk. The next write will happen at the beginning of the new chunk. </p><dl class="section return"><dt>Returns</dt><dd>A status code, 0 meaning success. </dd></dl>
 
-<p>Implemented in <a class="el" href="classvrs_1_1_disk_file.html#a5ad9ab38d517612d3a162bfb2b938f3c">vrs::DiskFile</a>.</p>
+<p>Implemented in <a class="el" href="classvrs_1_1_disk_file_t.html#abac5192bf096be66db2973f7c86fbec0">vrs::DiskFileT&lt; FileChunk &gt;</a>.</p>
 
 </div>
 </div>
-<a id="a91518076bc2908a1a4b21aace0fe79cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91518076bc2908a1a4b21aace0fe79cf">&#9670;&nbsp;</a></span>create()</h2>
+<a id="af5271bfd7ee63339b86b4e94ad213a08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5271bfd7ee63339b86b4e94ad213a08">&#9670;&nbsp;</a></span>create() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int vrs::WriteFileHandler::create </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structvrs_1_1_file_spec.html">FileSpec</a> &amp;&#160;</td>
+          <td class="paramname"><em>spec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create a new file for writing, using a spec. The path of the file to create is expected to be in the first chunk. Optional URI parameters might be provided in the spec' extras. </p>
+
+</div>
+</div>
+<a id="aa8a6dce9aa800c50bc586d29235cac31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8a6dce9aa800c50bc586d29235cac31">&#9670;&nbsp;</a></span>create() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -254,8 +285,18 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>CacheStatsCallbackFu
           <td class="memname">virtual int vrs::WriteFileHandler::create </td>
           <td>(</td>
           <td class="paramtype">const string &amp;&#160;</td>
-          <td class="paramname"><em>newFilePath</em></td><td>)</td>
+          <td class="paramname"><em>newFilePath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const map&lt; string, string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -267,12 +308,13 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>CacheStatsCallbackFu
 <p>Create a new file for writing. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">newFilePath</td><td>a disk path to create the file. </td></tr>
+    <tr><td class="paramname">options</td><td>optional parameters to pass when creating the file. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A status code, 0 meaning success. </dd></dl>
 
-<p>Implemented in <a class="el" href="classvrs_1_1_atomic_disk_file.html#a5f679fc55d41375bc186797a32d883a7">vrs::AtomicDiskFile</a>, and <a class="el" href="classvrs_1_1_disk_file.html#afcc5c48732bf694f2cb76f83e9dd0f2e">vrs::DiskFile</a>.</p>
+<p>Implemented in <a class="el" href="classvrs_1_1_atomic_disk_file.html#aaa5c0b64056378956b2247e7829de713">vrs::AtomicDiskFile</a>, and <a class="el" href="classvrs_1_1_disk_file_t.html#a32e9a8b2fadd2a8d9bd9753082b853bb">vrs::DiskFileT&lt; FileChunk &gt;</a>.</p>
 
 </div>
 </div>
@@ -346,7 +388,7 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>CacheStatsCallbackFu
 
 <p>Reimplemented from <a class="el" href="classvrs_1_1_file_handler.html#afe53e88b396758690f2c8754bcb39556">vrs::FileHandler</a>.</p>
 
-<p>Implemented in <a class="el" href="classvrs_1_1_disk_file.html#a8977e1b77bfba8a212141f1ccabad968">vrs::DiskFile</a>.</p>
+<p>Implemented in <a class="el" href="classvrs_1_1_disk_file_t.html#ae6af25461ccaee83e1a7387210563311">vrs::DiskFileT&lt; FileChunk &gt;</a>.</p>
 
 </div>
 </div>
@@ -392,7 +434,7 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>CacheStatsCallbackFu
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A status code, 0 meaning success. </dd></dl>
 
-<p>Implemented in <a class="el" href="classvrs_1_1_disk_file.html#a87b7c5bdc509698d1b7faf37214ce36c">vrs::DiskFile</a>.</p>
+<p>Implemented in <a class="el" href="classvrs_1_1_disk_file_t.html#ace8dc62447a9b273bdd17cdcb84d7078">vrs::DiskFileT&lt; FileChunk &gt;</a>.</p>
 
 </div>
 </div>
@@ -420,7 +462,7 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>CacheStatsCallbackFu
 </div><div class="memdoc">
 <p>Switch from read-only to read-write mode. Reopen the same file for modification writes. </p><dl class="section return"><dt>Returns</dt><dd>A status code, 0 meaning success. </dd></dl>
 
-<p>Implemented in <a class="el" href="classvrs_1_1_disk_file.html#adcc8e79676ffc203c120423677f97da8">vrs::DiskFile</a>.</p>
+<p>Implemented in <a class="el" href="classvrs_1_1_disk_file_t.html#a95f6f67231f2ee449813db732f68e927">vrs::DiskFileT&lt; FileChunk &gt;</a>.</p>
 
 </div>
 </div>
@@ -448,7 +490,7 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>CacheStatsCallbackFu
 </div><div class="memdoc">
 <p>Tell if modifying files is supported by this <a class="el" href="classvrs_1_1_file_handler.html" title="Class to abstract VRS file system operations, to enable support for alternate storage methods,...">FileHandler</a> implementation. </p><dl class="section return"><dt>Returns</dt><dd>True if file modification and creation is supported. </dd></dl>
 
-<p>Implemented in <a class="el" href="classvrs_1_1_disk_file.html#a00014804fa261de4ed03e536fd76ae62">vrs::DiskFile</a>.</p>
+<p>Implemented in <a class="el" href="classvrs_1_1_disk_file_t.html#aa7b075e8c3b836915d1cac5f79594522">vrs::DiskFileT&lt; FileChunk &gt;</a>.</p>
 
 </div>
 </div>
@@ -476,7 +518,7 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>CacheStatsCallbackFu
 </div><div class="memdoc">
 <p>Truncate chunk to the current file position. Use with care. </p><dl class="section return"><dt>Returns</dt><dd>A status code, 0 meaning success. </dd></dl>
 
-<p>Implemented in <a class="el" href="classvrs_1_1_disk_file.html#a26300494328e0caa7ba7d18d40dd0a74">vrs::DiskFile</a>.</p>
+<p>Implemented in <a class="el" href="classvrs_1_1_disk_file_t.html#a913a5a3dc08e6b92b767d0f935d155e5">vrs::DiskFileT&lt; FileChunk &gt;</a>.</p>
 
 </div>
 </div>
@@ -520,9 +562,9 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>CacheStatsCallbackFu
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A status code, 0 meaning success. In case of error, you can use <a class="el" href="classvrs_1_1_file_handler.html#ac1c2ac008404ab6a71f5b41a13c187e8">getLastRWSize()</a> to know how many bytes were really writen. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A status code, 0 meaning success. In case of error, you can use <a class="el" href="classvrs_1_1_file_handler.html#ac1c2ac008404ab6a71f5b41a13c187e8">getLastRWSize()</a> to know how many bytes were really written. </dd></dl>
 
-<p>Implemented in <a class="el" href="classvrs_1_1_disk_file.html#ad3456c97225c0a150587e6f4a9cc1d80">vrs::DiskFile</a>.</p>
+<p>Implemented in <a class="el" href="classvrs_1_1_disk_file_t.html#a658dd362aa98bbe33920af26f3cc39c8">vrs::DiskFileT&lt; FileChunk &gt;</a>.</p>
 
 </div>
 </div>

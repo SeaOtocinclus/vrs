@@ -104,6 +104,14 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvrs_1_1_async_file_descriptor.html">AsyncFileDescriptor</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvrs_1_1_aligned_buffer.html">AlignedBuffer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvrs_1_1_async_buffer.html">AsyncBuffer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvrs_1_1_async_disk_file_chunk.html">AsyncDiskFileChunk</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvrs_1_1_compressor.html">Compressor</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper class to compress data using lz4 or zstd presets.  <a href="classvrs_1_1_compressor.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,10 +167,10 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialized <a class="el" href="classvrs_1_1_data_layout.html" title="The DataLayout class describes the data stored inside a DataLayoutContentBlock.">DataLayout</a> for programmatic <a class="el" href="classvrs_1_1_data_layout.html" title="The DataLayout class describes the data stored inside a DataLayoutContentBlock.">DataLayout</a> generation.  <a href="classvrs_1_1_manual_data_layout.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvrs_1_1_data_layout_struct.html">DataLayoutStruct</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper class to include <a class="el" href="classvrs_1_1_data_layout.html" title="The DataLayout class describes the data stored inside a DataLayoutContentBlock.">DataLayout</a> structs containing a set of DataPieceXXX and <a class="el" href="structvrs_1_1_data_layout_struct.html" title="Helper class to include DataLayout structs containing a set of DataPieceXXX and DataLayoutStruct whil...">DataLayoutStruct</a> while preserving the required unicity of the field names. Embedded <a class="el" href="classvrs_1_1_data_piece.html" title="Abstract class representing a piece of information part of a DataLayout.">DataPiece</a> objects will have a name automatically prefixed with the name of the <a class="el" href="structvrs_1_1_data_layout_struct.html" title="Helper class to include DataLayout structs containing a set of DataPieceXXX and DataLayoutStruct whil...">DataLayoutStruct</a>, with a '/' in between.  <a href="structvrs_1_1_data_layout_struct.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper class to include <a class="el" href="classvrs_1_1_data_layout.html" title="The DataLayout class describes the data stored inside a DataLayoutContentBlock.">DataLayout</a> structs containing a set of DataPieceXXX and <a class="el" href="structvrs_1_1_data_layout_struct.html" title="Helper class to include DataLayout structs containing a set of DataPieceXXX and DataLayoutStruct whil...">DataLayoutStruct</a> while preserving the required uniqueness of the field names. Embedded <a class="el" href="classvrs_1_1_data_piece.html" title="Abstract class representing a piece of information part of a DataLayout.">DataPiece</a> objects will have a name automatically prefixed with the name of the <a class="el" href="structvrs_1_1_data_layout_struct.html" title="Helper class to include DataLayout structs containing a set of DataPieceXXX and DataLayoutStruct whil...">DataLayoutStruct</a>, with a '/' in between.  <a href="structvrs_1_1_data_layout_struct.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvrs_1_1_data_layout_struct_array.html">DataLayoutStructArray</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper class to include <a class="el" href="classvrs_1_1_data_layout.html" title="The DataLayout class describes the data stored inside a DataLayoutContentBlock.">DataLayout</a> structs containing a sliced array of DataPieceXXX and <a class="el" href="structvrs_1_1_data_layout_struct.html" title="Helper class to include DataLayout structs containing a set of DataPieceXXX and DataLayoutStruct whil...">DataLayoutStruct</a> while preserving the required unicity of the field names. Embedded <a class="el" href="classvrs_1_1_data_piece.html" title="Abstract class representing a piece of information part of a DataLayout.">DataPiece</a> objects will have a name automatically prefixed with the name of the <a class="el" href="structvrs_1_1_data_layout_struct.html" title="Helper class to include DataLayout structs containing a set of DataPieceXXX and DataLayoutStruct whil...">DataLayoutStruct</a>, with a '/0'... /Size-1' in between.  <a href="structvrs_1_1_data_layout_struct_array.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper class to include <a class="el" href="classvrs_1_1_data_layout.html" title="The DataLayout class describes the data stored inside a DataLayoutContentBlock.">DataLayout</a> structs containing a sliced array of DataPieceXXX and <a class="el" href="structvrs_1_1_data_layout_struct.html" title="Helper class to include DataLayout structs containing a set of DataPieceXXX and DataLayoutStruct whil...">DataLayoutStruct</a> while preserving the required uniqueness of the field names. Embedded <a class="el" href="classvrs_1_1_data_piece.html" title="Abstract class representing a piece of information part of a DataLayout.">DataPiece</a> objects will have a name automatically prefixed with the name of the <a class="el" href="structvrs_1_1_data_layout_struct.html" title="Helper class to include DataLayout structs containing a set of DataPieceXXX and DataLayoutStruct whil...">DataLayoutStruct</a>, with a '/0'... /Size-1' in between.  <a href="structvrs_1_1_data_layout_struct_array.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvrs_1_1_optional_data_pieces.html">OptionalDataPieces</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to allocate optional fields only when it is enabled.  <a href="classvrs_1_1_optional_data_pieces.html#details">More...</a><br /></td></tr>
@@ -206,10 +214,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvrs_1_1_decompressor.html">Decompressor</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classvrs_1_1_decompressor.html" title="Decompressor helper class, to decompresses data at a target location.">Decompressor</a> helper class, to decompresses data at a target location.  <a href="classvrs_1_1_decompressor.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvrs_1_1_disk_file.html">DiskFile</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classvrs_1_1_file_handler.html" title="Class to abstract VRS file system operations, to enable support for alternate storage methods,...">FileHandler</a> implementation for disk files, with chunked file support.  <a href="classvrs_1_1_disk_file.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvrs_1_1_disk_file_t.html">DiskFileT</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classvrs_1_1_file_handler.html" title="Class to abstract VRS file system operations, to enable support for alternate storage methods,...">FileHandler</a> implementation for disk files, with chunked file support.  <a href="classvrs_1_1_disk_file_t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvrs_1_1_atomic_disk_file.html">AtomicDiskFile</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvrs_1_1_disk_file_chunk.html">DiskFileChunk</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvrs_1_1_file_cache.html">FileCache</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility class to manage various forms of file caching. Disabled by default.  <a href="classvrs_1_1_file_cache.html#details">More...</a><br /></td></tr>
@@ -339,6 +349,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:ab0a2e6fd9c3c7d95b9c2716b7bec6344"><td class="memItemLeft" align="right" valign="top"><a id="ab0a2e6fd9c3c7d95b9c2716b7bec6344"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>AsyncHandle</b> = <a class="el" href="structvrs_1_1_async_file_descriptor.html">AsyncFileDescriptor</a></td></tr>
+<tr class="separator:ab0a2e6fd9c3c7d95b9c2716b7bec6344"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26c3dfc6cb75d7869e0c3a9498574101"><td class="memItemLeft" align="right" valign="top"><a id="a26c3dfc6cb75d7869e0c3a9498574101"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevrs.html#a26c3dfc6cb75d7869e0c3a9498574101">Point2Dd</a> = <a class="el" href="structvrs_1_1_point_n_d.html">PointND</a>&lt; double, 2 &gt;</td></tr>
 <tr class="memdesc:a26c3dfc6cb75d7869e0c3a9498574101"><td class="mdescLeft">&#160;</td><td class="mdescRight">2D double point class. <br /></td></tr>
@@ -411,6 +424,9 @@ using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nam
 using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevrs.html#ae543bb254d8fbf76ecab8e9c15118f2d">Matrix4Di</a> = <a class="el" href="structvrs_1_1_matrix_n_d.html">MatrixND</a>&lt; int32_t, 4 &gt;</td></tr>
 <tr class="memdesc:ae543bb254d8fbf76ecab8e9c15118f2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">4D int32_t matrix class. <br /></td></tr>
 <tr class="separator:ae543bb254d8fbf76ecab8e9c15118f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaf41da73e6cff8399c0a75a0f412f9c"><td class="memItemLeft" align="right" valign="top"><a id="afaf41da73e6cff8399c0a75a0f412f9c"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>DiskFile</b> = <a class="el" href="classvrs_1_1_disk_file_t.html">DiskFileT</a>&lt; <a class="el" href="classvrs_1_1_disk_file_chunk.html">DiskFileChunk</a> &gt;</td></tr>
+<tr class="separator:afaf41da73e6cff8399c0a75a0f412f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a142c4b247fe86fb372c27f77d46e96b4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevrs.html#a142c4b247fe86fb372c27f77d46e96b4">InitCreatedThreadCallback</a> = std::function&lt; void(std::thread &amp;, <a class="el" href="namespacevrs.html#ac78cdeb41c8573010548993b9d2f00c6">ThreadRole</a>, int)&gt;</td></tr>
 <tr class="separator:a142c4b247fe86fb372c27f77d46e96b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04d155e698e82b4cd67ec9312fadefb0"><td class="memItemLeft" align="right" valign="top"><a id="a04d155e698e82b4cd67ec9312fadefb0"></a>
@@ -426,24 +442,25 @@ Enumerations</h2></td></tr>
 , <a class="el" href="namespacevrs.html#a37a35edf18e8bb343398cb938d3e2b7ba981e12fe6dbad219590b0546f411adc1">Lz4Fast</a>
 , <a class="el" href="namespacevrs.html#a37a35edf18e8bb343398cb938d3e2b7ba094c8cb4ef8c5578d075bd7dc031ac33">Lz4Tight</a>
 , <br />
-&#160;&#160;<b>ZstdFast</b>
+&#160;&#160;<b>ZstdFaster</b>
+, <b>ZstdFast</b>
 , <b>ZstdLight</b>
 , <b>ZstdMedium</b>
-, <b>ZstdHeavy</b>
 , <br />
-&#160;&#160;<b>ZstdHigh</b>
+&#160;&#160;<b>ZstdHeavy</b>
+, <b>ZstdHigh</b>
 , <b>ZstdTight</b>
 , <b>ZstdMax</b>
-, <b>COUNT</b>
 , <br />
-&#160;&#160;<b>FirstLz4Preset</b> = Lz4Fast
+&#160;&#160;<b>COUNT</b>
+, <b>FirstLz4Preset</b> = Lz4Fast
 , <b>LastLz4Preset</b> = Lz4Tight
-, <b>FirstZstdPreset</b> = ZstdFast
-, <b>LastZstdPreset</b> = ZstdMax
+, <b>FirstZstdPreset</b> = ZstdFaster
 , <br />
-&#160;&#160;<b>CompressedFirst</b> = Lz4Fast
+&#160;&#160;<b>LastZstdPreset</b> = ZstdMax
+, <b>CompressedFirst</b> = Lz4Fast
 , <b>CompressedLast</b> = ZstdMax
-, <a class="el" href="namespacevrs.html#a37a35edf18e8bb343398cb938d3e2b7ba7a1920d61156abc05a60135aefe8bc67">Default</a> = Lz4Fast
+, <a class="el" href="namespacevrs.html#a37a35edf18e8bb343398cb938d3e2b7ba7a1920d61156abc05a60135aefe8bc67">Default</a> = ZstdFaster
 <br />
  }</td></tr>
 <tr class="memdesc:a37a35edf18e8bb343398cb938d3e2b7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">VRS Compression setting.  <a href="namespacevrs.html#a37a35edf18e8bb343398cb938d3e2b7b">More...</a><br /></td></tr>
@@ -684,26 +701,36 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a515787770c6abd00abb95f5f4042bf39">RgbCameraRecordableClass</a> = 214
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5af72adc94cf96525939e58be4712a2ae8">DisplayObserverCameraRecordableClass</a> = 215
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5adfc68b38a4f1b4dfd771cefa868068ab">WorldObserverCameraRecordableClass</a> = 216
-, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a87d299e3d75e6dd7d7d77cbcad6e321b">MonoAudioRecordableClass</a> = 230
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a2c4d3978e5822776894a283e6ddf9f1f">DisparityCameraRecordableClass</a> = 217
 , <br />
-&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a705e8d05e43ae1c71dc6cb56c7e7616a">StereoAudioRecordableClass</a> = 231
+&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a87d299e3d75e6dd7d7d77cbcad6e321b">MonoAudioRecordableClass</a> = 230
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a705e8d05e43ae1c71dc6cb56c7e7616a">StereoAudioRecordableClass</a> = 231
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a2aea7fbf88784a53ece97c8f304ee367">AmbientAudioRecordableClass</a> = 232
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a6090c219afbc3b05e4d5727019f2de5a">SensorRecordableClass</a> = 240
-, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5acc3ae625ab1f8878bc167d2edb9c0051">ImuRecordableClass</a> = 241
 , <br />
-&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5ab19e9d64923b634edbff450bd17f363a">AccelerometerRecordableClass</a> = 242
+&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5acc3ae625ab1f8878bc167d2edb9c0051">ImuRecordableClass</a> = 241
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5ab19e9d64923b634edbff450bd17f363a">AccelerometerRecordableClass</a> = 242
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5ac541be7a0ac36d13795ab1a0752e2721">MagnetometerRecordableClass</a> = 243
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a207581d74297796fd94ade8798360569">GyroscopeRecordableClass</a> = 244
-, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a1dd1632febe7b2145c58a6fa0ac56673">LidarRecordableClass</a> = 245
 , <br />
-&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a5ea8876ed2f272736d0f29f8c08553ea">TemperatureRecordableClass</a> = 246
+&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a1dd1632febe7b2145c58a6fa0ac56673">LidarRecordableClass</a> = 245
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a5ea8876ed2f272736d0f29f8c08553ea">TemperatureRecordableClass</a> = 246
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a738bc2e6a7b2b3d02cb21aa21973539c">BarometerRecordableClass</a> = 247
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5abec8458611ad30f51eeebe8fcbbd0e88">PhotoplethysmogramRecordableClass</a> = 248
-, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5ad1ee725ac80d43af263f6ce5ef79515f">EMGRecordableClass</a> = 249
 , <br />
-&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a97b808033ebdbb4d0861b7b10f787abc">CapacitiveTouchRecordableClass</a> = 250
-, <b>HeartRateRecordableClass</b> = 251
-, <b>CaloriesRecordableClass</b> = 252
+&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5ad1ee725ac80d43af263f6ce5ef79515f">EMGRecordableClass</a> = 249
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a97b808033ebdbb4d0861b7b10f787abc">CapacitiveTouchRecordableClass</a> = 250
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5aa1028cd5ac562131a22ebf8dea35498c">HeartRateRecordableClass</a> = 251
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5adec86194be43bcc56d67a5840e762bdb">CaloriesRecordableClass</a> = 252
+, <br />
+&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5aea1216f1fdca3e4dd60db534a6e9e9fc">CsaRecordableClass</a> = 253
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a612b164037e7e3480d16d393772c7f08">RadarRecordableClass</a> = 254
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a7af2c95f40c2a214e7043614e815a643">StepCountRecordableClass</a> = 255
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a421e251c03df48801484c082419fe26a">ForceRecordableClass</a> = 256
+, <br />
+&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a9c00a9a5feb99214ab2cffba803d4b52">DistanceRecordableClass</a> = 257
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a7bb1c79f8c3f19b8f6111af0f9a124fb">ActiveMinutesRecordableClass</a> = 258
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5aa26fa58b342d0cfbf75c56e3f858716d">HeadingRecordableClass</a> = 259
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a7cd7d6616f5ad93d970b5922ad61644c">CalibrationRecordableClass</a> = 260
 , <br />
 &#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a015f4f4f7127bfa675464c6d26d02c67">AlignmentRecordableClass</a> = 261
@@ -712,66 +739,68 @@ Enumerations</h2></td></tr>
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a96ee1c7890dccff35b0a4e65c9cf4b94">PerformanceRecordableClass</a> = 264
 , <br />
 &#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a3f076667df3df17ed3d4a2d1eea573d0">IlluminationRecordableClass</a> = 265
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a0c7ec518a11e2d65058025033de26896">DisplayRecordableClass</a> = 266
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a9c5afd3ac39708896bb42a674d0c7b32">SyncRecordableClass</a> = 280
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a3a051a559661d4822d11977b9dbad80a">GpsRecordableClass</a> = 281
-, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5af32ce687a800396e4c980c19d91e4100">WifiBeaconRecordableClass</a> = 282
 , <br />
-&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5ae4e62ac387600e101072ac9905c59031">BluetoothBeaconRecordableClass</a> = 283
+&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5af32ce687a800396e4c980c19d91e4100">WifiBeaconRecordableClass</a> = 282
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5ae4e62ac387600e101072ac9905c59031">BluetoothBeaconRecordableClass</a> = 283
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a4713c063a77df4ba2f93810d469a818c">UsbRecordableClass</a> = 284
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a9e52b3b00f9ebed2b1b13f9fc47b15d8">TimeRecordableClass</a> = 285
-, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a5ce1e16873eb9a011c4e08ded0ce9798">AttentionRecordableClass</a> = 286
 , <br />
-&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a9c5b0caaa830b454e1da2b2ff6116a2f">GMSRecordableClass</a> = 287
+&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a5ce1e16873eb9a011c4e08ded0ce9798">AttentionRecordableClass</a> = 286
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a9c5b0caaa830b454e1da2b2ff6116a2f">GMSRecordableClass</a> = 287
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5ade2137ea54c729b0102795effba7a35e">InputRecordableClass</a> = 300
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5af6fcc70c3c172221f6e974e3fdccc3d9">TextInputRecordableClass</a> = 301
-, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a163618e879ed2730013bfa67fb28cc03">MouseRecordableClass</a> = 302
 , <br />
-&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5aabaa257caebfd3c1b2df551ce051c148">TouchInputRecordableClass</a> = 303
+&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a163618e879ed2730013bfa67fb28cc03">MouseRecordableClass</a> = 302
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5aabaa257caebfd3c1b2df551ce051c148">TouchInputRecordableClass</a> = 303
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5ab7127f9e383d8e7852cc83264d099eb7">GestureInputRecordableClass</a> = 304
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a54f9eeed7c6b3ff277254ded7c025c55">ControllerRecordableClass</a> = 305
-, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a51b34261622abb0e084e161ec148fcca">EventRecordableClass</a> = 320
 , <br />
-&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5ac8b87459bea9fcb3446c66abb4dc95ce">CommandRecordableClass</a> = 321
+&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a51b34261622abb0e084e161ec148fcca">EventRecordableClass</a> = 320
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5ac8b87459bea9fcb3446c66abb4dc95ce">CommandRecordableClass</a> = 321
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a4cdaf12738e2d93f63830f57547d93d4">InstructionRecordableClass</a> = 322
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5aeb06bf1c3241d5cf21afd0092c6e9fd4">ScriptRecordableClass</a> = 323
-, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5ad497babcc2796e904ac6094cf3f4abb1">ControlRecordableClass</a> = 324
 , <br />
-&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a43a37c8299b46cdbbdcf95afcab22cf9">GroundTruthRecordableClass</a> = 340
+&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5ad497babcc2796e904ac6094cf3f4abb1">ControlRecordableClass</a> = 324
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a43a37c8299b46cdbbdcf95afcab22cf9">GroundTruthRecordableClass</a> = 340
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a5cebf445b9530d0456b33ced8b3ffacc">GroundTruthImuRecordableClass</a> = 341
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a9f77b4613d279d0335d596d8b7d1774c">GroundTruthAlignmentRecordableClass</a> = 342
-, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a9a4c7b2db3f27ebeebfc9a46954139b4">GroundTruthPositionRecordableClass</a> = 343
 , <br />
-&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5aac17da2681f3816c2c93a5f5f37012f1">GroundTruthOrientationRecordableClass</a> = 344
+&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a9a4c7b2db3f27ebeebfc9a46954139b4">GroundTruthPositionRecordableClass</a> = 343
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5aac17da2681f3816c2c93a5f5f37012f1">GroundTruthOrientationRecordableClass</a> = 344
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a91915d3c1e9ecb156d15e940e4dad527">GroundTruthDepthRecordableClass</a> = 345
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5abdd40bddf4cdd25426c1a5adfda5f1d4">ResultRecordableClass</a> = 370
-, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5ae627dd9f9cd4cf34613b8dd84eb23717">PoseRecordableClass</a> = 371
 , <br />
-&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a96c4e0f8ccf4aa2d45ff867242d7ca17">MotionRecordableClass</a> = 372
+&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5ae627dd9f9cd4cf34613b8dd84eb23717">PoseRecordableClass</a> = 371
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a96c4e0f8ccf4aa2d45ff867242d7ca17">MotionRecordableClass</a> = 372
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a8c8b1563ecff1c54f17b9e1ed584b0d3">GazeRecordableClass</a> = 373
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a5775094fd3f300afaa2f3a52d3a52bad">MeshRecordableClass</a> = 374
-, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a15d6099d80c765ce3ce0c18013b64b48">MocapRecordableClass</a> = 375
 , <br />
-&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a8a0c513beec7e6e0771b6cf7af287611">PointCloudRecordableClass</a> = 376
+&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a15d6099d80c765ce3ce0c18013b64b48">MocapRecordableClass</a> = 375
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a8a0c513beec7e6e0771b6cf7af287611">PointCloudRecordableClass</a> = 376
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a86e4083da740085253230c31545ba4ac">MapRecordableClass</a> = 377
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a84b07d3ef976c19c6402920453e9ea41">SensorVarianceBiasRecordableClass</a> = 378
-, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5aeb953572f68108f4a0189571e11fa232">AnchorRecordableClass</a> = 379
 , <br />
-&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a3fa8e15b234e526631aa363b0b75914b">SegmentationRecordableClass</a> = 380
+&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5aeb953572f68108f4a0189571e11fa232">AnchorRecordableClass</a> = 379
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a3fa8e15b234e526631aa363b0b75914b">SegmentationRecordableClass</a> = 380
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a8f00abbb32b64079aab5396b3a0eab96">TextRecordableClass</a> = 381
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a9223e5af9b8211056e3f6c8e7220c2e9">AnnotationRecordableClass</a> = 400
-, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5ab1533cd00367686397d610fb42c53a00">SampleDeviceRecordableClass</a> = 998
+, <br />
+&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5ab1533cd00367686397d610fb42c53a00">SampleDeviceRecordableClass</a> = 998
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5ad07e5ad74acdea9a8a863780f9a35732">UnitTestRecordableClass</a> = 999
-, <br />
-&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5ad366946ee7710480a215a81ba0e6c232">FirstRecordableClassId</a> = 200
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5ad366946ee7710480a215a81ba0e6c232">FirstRecordableClassId</a> = 200
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a378c157d28ccf4d29f392288c25dc6df">LastRecordableClassId</a> = 999
-, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a064343971dad4dc557deae1d5565a25d">SlamCameraData</a> = 1201
+, <br />
+&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a064343971dad4dc557deae1d5565a25d">SlamCameraData</a> = 1201
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5ae24168a6f8e7e551114b2d6b15c31391">SlamImuData</a> = 1202
-, <br />
-&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a6c30d8125f6a7e88c6a54d73fc7c932b">SlamMagnetometerData</a> = 1203
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a6c30d8125f6a7e88c6a54d73fc7c932b">SlamMagnetometerData</a> = 1203
 , <b>TestDevices</b> = 65500
-, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5af0cf646be82c38dfedcd57e266247eb8">UnitTest1</a> = TestDevices
-, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a9fcebce7c0416116fc553c5914da7d7c">UnitTest2</a>
 , <br />
-&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a539c59d5ce623d02458f15cf6d01c530">SampleDevice</a>
+&#160;&#160;<a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5af0cf646be82c38dfedcd57e266247eb8">UnitTest1</a> = TestDevices
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a9fcebce7c0416116fc553c5914da7d7c">UnitTest2</a>
+, <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5a539c59d5ce623d02458f15cf6d01c530">SampleDevice</a>
 , <a class="el" href="namespacevrs.html#ae6fdfd6738201eddee4597c27fe31ac5aec0fc0100c4fc1ce4eea230c3dc10360">Undefined</a> = 65535
 <br />
  }</td></tr>
@@ -1473,6 +1502,8 @@ const int&#160;</td><td class="memItemRight" valign="bottom"><b>kDomainErrorsSta
 </td></tr>
 <tr><td class="fieldname"><a id="ae6fdfd6738201eddee4597c27fe31ac5adfc68b38a4f1b4dfd771cefa868068ab"></a>WorldObserverCameraRecordableClass&#160;</td><td class="fielddoc"><p>For world observing cameras. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="ae6fdfd6738201eddee4597c27fe31ac5a2c4d3978e5822776894a283e6ddf9f1f"></a>DisparityCameraRecordableClass&#160;</td><td class="fielddoc"><p>For disparity cameras. </p>
+</td></tr>
 <tr><td class="fieldname"><a id="ae6fdfd6738201eddee4597c27fe31ac5a87d299e3d75e6dd7d7d77cbcad6e321b"></a>MonoAudioRecordableClass&#160;</td><td class="fielddoc"><p>For mono microphones. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ae6fdfd6738201eddee4597c27fe31ac5a705e8d05e43ae1c71dc6cb56c7e7616a"></a>StereoAudioRecordableClass&#160;</td><td class="fielddoc"><p>For stereo microphones. </p>
@@ -1501,6 +1532,24 @@ const int&#160;</td><td class="memItemRight" valign="bottom"><b>kDomainErrorsSta
 </td></tr>
 <tr><td class="fieldname"><a id="ae6fdfd6738201eddee4597c27fe31ac5a97b808033ebdbb4d0861b7b10f787abc"></a>CapacitiveTouchRecordableClass&#160;</td><td class="fielddoc"><p>For capacitive touch data streams. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="ae6fdfd6738201eddee4597c27fe31ac5aa1028cd5ac562131a22ebf8dea35498c"></a>HeartRateRecordableClass&#160;</td><td class="fielddoc"><p>Heart rate data streams. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae6fdfd6738201eddee4597c27fe31ac5adec86194be43bcc56d67a5840e762bdb"></a>CaloriesRecordableClass&#160;</td><td class="fielddoc"><p>Calories data streams. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae6fdfd6738201eddee4597c27fe31ac5aea1216f1fdca3e4dd60db534a6e9e9fc"></a>CsaRecordableClass&#160;</td><td class="fielddoc"><p>CSA data streams. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae6fdfd6738201eddee4597c27fe31ac5a612b164037e7e3480d16d393772c7f08"></a>RadarRecordableClass&#160;</td><td class="fielddoc"><p>Radar data streams. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae6fdfd6738201eddee4597c27fe31ac5a7af2c95f40c2a214e7043614e815a643"></a>StepCountRecordableClass&#160;</td><td class="fielddoc"><p>Step count data streams. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae6fdfd6738201eddee4597c27fe31ac5a421e251c03df48801484c082419fe26a"></a>ForceRecordableClass&#160;</td><td class="fielddoc"><p>Force data streams. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae6fdfd6738201eddee4597c27fe31ac5a9c00a9a5feb99214ab2cffba803d4b52"></a>DistanceRecordableClass&#160;</td><td class="fielddoc"><p>Distance data streams. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae6fdfd6738201eddee4597c27fe31ac5a7bb1c79f8c3f19b8f6111af0f9a124fb"></a>ActiveMinutesRecordableClass&#160;</td><td class="fielddoc"><p>Active minutes data streams. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae6fdfd6738201eddee4597c27fe31ac5aa26fa58b342d0cfbf75c56e3f858716d"></a>HeadingRecordableClass&#160;</td><td class="fielddoc"><p>Heading data streams. </p>
+</td></tr>
 <tr><td class="fieldname"><a id="ae6fdfd6738201eddee4597c27fe31ac5a7cd7d6616f5ad93d970b5922ad61644c"></a>CalibrationRecordableClass&#160;</td><td class="fielddoc"><p>For calibration data streams. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ae6fdfd6738201eddee4597c27fe31ac5a015f4f4f7127bfa675464c6d26d02c67"></a>AlignmentRecordableClass&#160;</td><td class="fielddoc"><p>For alignment data streams. </p>
@@ -1512,6 +1561,8 @@ const int&#160;</td><td class="memItemRight" valign="bottom"><b>kDomainErrorsSta
 <tr><td class="fieldname"><a id="ae6fdfd6738201eddee4597c27fe31ac5a96ee1c7890dccff35b0a4e65c9cf4b94"></a>PerformanceRecordableClass&#160;</td><td class="fielddoc"><p>For performance data streams. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ae6fdfd6738201eddee4597c27fe31ac5a3f076667df3df17ed3d4a2d1eea573d0"></a>IlluminationRecordableClass&#160;</td><td class="fielddoc"><p>For illumination data streams. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae6fdfd6738201eddee4597c27fe31ac5a0c7ec518a11e2d65058025033de26896"></a>DisplayRecordableClass&#160;</td><td class="fielddoc"><p>For display buffer data streams. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ae6fdfd6738201eddee4597c27fe31ac5a9c5afd3ac39708896bb42a674d0c7b32"></a>SyncRecordableClass&#160;</td><td class="fielddoc"><p>For synchronisation data streams. </p>
 </td></tr>
@@ -1584,6 +1635,8 @@ const int&#160;</td><td class="memItemRight" valign="bottom"><b>kDomainErrorsSta
 <tr><td class="fieldname"><a id="ae6fdfd6738201eddee4597c27fe31ac5aeb953572f68108f4a0189571e11fa232"></a>AnchorRecordableClass&#160;</td><td class="fielddoc"><p>For anchor data streams (i.e. spatial persistence anchors). </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ae6fdfd6738201eddee4597c27fe31ac5a3fa8e15b234e526631aa363b0b75914b"></a>SegmentationRecordableClass&#160;</td><td class="fielddoc"><p>For segmentation data streams. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae6fdfd6738201eddee4597c27fe31ac5a8f00abbb32b64079aab5396b3a0eab96"></a>TextRecordableClass&#160;</td><td class="fielddoc"><p>For result data streams stored as text. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ae6fdfd6738201eddee4597c27fe31ac5a9223e5af9b8211056e3f6c8e7220c2e9"></a>AnnotationRecordableClass&#160;</td><td class="fielddoc"><p>For annotation streams. </p>
 </td></tr>
