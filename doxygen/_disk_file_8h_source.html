@@ -202,7 +202,7 @@ $(function() {
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="keyword">using</span> DiskFile = DiskFileT&lt;DiskFileChunk&gt;;</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="preprocessor">#if (IS_LINUX_PLATFORM() &amp;&amp; IS_X86_PLATFORM()) || (IS_WINDOWS_PLATFORM() &amp;&amp; !defined(__clang__))</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="preprocessor">#if (IS_LINUX_PLATFORM() &amp;&amp; IS_X86_PLATFORM()) || (IS_WINDOWS_PLATFORM())</span></div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor">#define VRS_ASYNC_DISKFILE_SUPPORTED() true</span></div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="keyword">class </span>AsyncDiskFileChunk;</div>
@@ -265,7 +265,7 @@ $(function() {
 <div class="ttc" id="aclassvrs_1_1_disk_file_t_html_af0867314df22885d3ef82ea25b3c3571"><div class="ttname"><a href="classvrs_1_1_disk_file_t.html#af0867314df22885d3ef82ea25b3c3571">vrs::DiskFileT::forgetFurtherChunks</a></div><div class="ttdeci">void forgetFurtherChunks(int64_t fileSize) override</div><div class="ttdoc">Call this method to forget any chunk beyond this file size.</div><div class="ttdef"><b>Definition:</b> DiskFile.cpp:121</div></div>
 <div class="ttc" id="aclassvrs_1_1_disk_file_t_html_afdf2ff75c33f4a7f4637a25ebafb4a49"><div class="ttname"><a href="classvrs_1_1_disk_file_t.html#afdf2ff75c33f4a7f4637a25ebafb4a49">vrs::DiskFileT::getChunkRange</a></div><div class="ttdeci">int getChunkRange(int64_t &amp;outChunkOffset, int64_t &amp;outChunkSize) const override</div><div class="ttdoc">Get range of the current chunk.</div><div class="ttdef"><b>Definition:</b> DiskFile.cpp:465</div></div>
 <div class="ttc" id="aclassvrs_1_1_write_file_handler_html"><div class="ttname"><a href="classvrs_1_1_write_file_handler.html">vrs::WriteFileHandler</a></div><div class="ttdoc">The WriteFileHandler interface adds write operations to the FileHandler interface.</div><div class="ttdef"><b>Definition:</b> WriteFileHandler.h:43</div></div>
-<div class="ttc" id="anamespacevrs_html"><div class="ttname"><a href="namespacevrs.html">vrs</a></div><div class="ttdef"><b>Definition:</b> AsyncDiskFileChunk.hpp:48</div></div>
+<div class="ttc" id="anamespacevrs_html"><div class="ttname"><a href="namespacevrs.html">vrs</a></div><div class="ttdef"><b>Definition:</b> AsyncDiskFileChunk.hpp:49</div></div>
 <div class="ttc" id="astructvrs_1_1_file_spec_html"><div class="ttname"><a href="structvrs_1_1_file_spec.html">vrs::FileSpec</a></div><div class="ttdoc">Generalized file descriptor class, allowing the efficient representation of complex file objects,...</div><div class="ttdef"><b>Definition:</b> FileSpec.h:37</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
