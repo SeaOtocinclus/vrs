@@ -23,3 +23,9 @@ target_link_libraries(vrs_utils_cli
     vrs_helpers
     vrs_logging
 )
+install(TARGETS vrs_utils_cli EXPORT VRSLibTargets
+  LIBRARY DESTINATION lib
+  ARCHIVE DESTINATION lib
+  RUNTIME DESTINATION bin
+  INCLUDES DESTINATION include
+)
