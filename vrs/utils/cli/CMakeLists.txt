@@ -15,7 +15,11 @@
 file (GLOB VRS_UTILS_CLI_SRCS *.cpp *.h *.hpp)
 
 add_library(vrs_utils_cli ${VRS_UTILS_CLI_SRCS})
-target_include_directories(vrs_utils_cli PUBLIC ${VRS_SOURCE_DIR})
+target_include_directories(vrs_utils_cli
+  PUBLIC
+    $<BUILD_INTERFACE:${VRS_SOURCE_DIR}>
+    $<INSTALL_INTERFACE:include>
+)
 target_link_libraries(vrs_utils_cli
   PUBLIC
     vrs_utils
