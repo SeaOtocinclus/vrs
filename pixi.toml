@@ -47,6 +47,9 @@ cmake = "3.27.6"
 cxx-compiler = "1.6.0.*"
 ninja = "1.11.1"
 
+[target.linux-64.dependencies]
+mesalib = "*"
+
 [dependencies]
 boost = "*"
 fmt = "10.1.1.*"
