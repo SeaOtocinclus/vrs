@@ -93,6 +93,7 @@ class FileHandler : public FileDelegator {
   /// @return A new object of the concrete type, ready to be used to open a new file.
   virtual unique_ptr<FileHandler> makeNew() const = 0;
   virtual const string& getFileHandlerName() const = 0;
+  virtual const string& getWriteFileHandlerName() const; // maybe use another FileHandler for writes
 
   /// Open a file in read-only mode.
   /// @param filePath: a disk path, or anything that the particular module recognizes.
@@ -229,9 +230,10 @@ class FileHandler : public FileDelegator {
 
   bool isFileHandlerMatch(const FileSpec& fileSpec) const;
 
-  /// Tell if the file handler is handling remote data, that might need caching for instance.
-  /// Because most custom file systems implementation are not local FS, defaults to true!
-  virtual bool isRemoteFileSystem() const;
+  /// Tell if the file handler is handling remote data. Readers might need caching.
+  /// Writers might not support modifying written data (and require a split head).
+  virtual bool isRemoteFileSystem() const = 0;
+
   /// Tell if the file handler is probably slow, and extra progress information might be useful.
   virtual bool showProgress() const {
     return isRemoteFileSystem();

@@ -57,6 +57,11 @@ struct CachingStrategyConverter : public EnumStringConverter<
 
 namespace vrs {
 
+const string& FileHandler::getWriteFileHandlerName() const {
+  static const string kEmptryString;
+  return kEmptryString;
+}
+
 unique_ptr<FileHandler> FileHandler::makeOpen(const string& filePath) {
   unique_ptr<FileHandler> delegate;
   int status = FileHandlerFactory::getInstance().delegateOpen(filePath, delegate);
@@ -112,10 +117,6 @@ int FileHandler::delegateOpen(const FileSpec& fileSpec, unique_ptr<FileHandler>&
 
 bool FileHandler::isReadOnly() const {
   return true;
-}
-
-bool FileHandler::isRemoteFileSystem() const {
-  return true; // everything but disk file is pretty much a remote file system...
 }
 
 bool FileHandler::isFileHandlerMatch(const FileSpec& fileSpec) const {

@@ -16,6 +16,9 @@
 
 #include "TelemetryLogger.h"
 
+#include <mutex>
+#include <vector>
+
 #define DEFAULT_LOG_CHANNEL "TelemetryLogger"
 #include <logging/Log.h>
 
@@ -26,16 +29,43 @@ using namespace std;
 
 namespace vrs {
 
-unique_ptr<TelemetryLogger> TelemetryLogger::setLogger(
-    unique_ptr<TelemetryLogger>&& telemetryLogger) {
-  unique_ptr<TelemetryLogger> previousLogger{std::move(getInstance())};
-  getInstance() = std::move(telemetryLogger);
-  return previousLogger;
+TelemetryLogger* TelemetryLogger::getDefaultLogger() {
+  static TelemetryLogger sDefaultLogger;
+  return &sDefaultLogger;
+}
+
+std::atomic<TelemetryLogger*>& TelemetryLogger::getCurrentLogger() {
+  static std::atomic<TelemetryLogger*> sCurrentLogger{getDefaultLogger()};
+  return sCurrentLogger;
+}
+
+void TelemetryLogger::setLogger(unique_ptr<TelemetryLogger> telemetryLogger) {
+  TelemetryLogger* previousLogger = nullptr;
+  {
+    static mutex sMutex;
+    lock_guard<mutex> lock(sMutex);
+    static vector<unique_ptr<TelemetryLogger>> sLoggers;
+    if (telemetryLogger) {
+      telemetryLogger->start();
+      previousLogger = getCurrentLogger().exchange(telemetryLogger.get());
+      sLoggers.push_back(std::move(telemetryLogger));
+    } else {
+      previousLogger = getCurrentLogger().exchange(getDefaultLogger());
+    }
+  }
+  previousLogger->stop();
 }
 
 void TelemetryLogger::logEvent(LogEvent&& event) {
   if (event.type == TelemetryLogger::kErrorType) {
     XR_LOGE(
+        "{}, {}: {}, {}",
+        event.operationContext.operation,
+        event.operationContext.sourceLocation,
+        event.message,
+        event.serverReply);
+  } else if (event.type == TelemetryLogger::kInfoType) {
+    XR_LOGI(
         "{}, {}: {}, {}",
         event.operationContext.operation,
         event.operationContext.sourceLocation,
@@ -71,11 +101,6 @@ void TelemetryLogger::logTraffic(
       event.retryCount,
       event.errorCount,
       event.error429Count);
-}
-
-unique_ptr<TelemetryLogger>& TelemetryLogger::getInstance() {
-  static unique_ptr<TelemetryLogger> sInstance{make_unique<TelemetryLogger>()};
-  return sInstance;
 }
 
 TelemetryLogger::~TelemetryLogger() = default;
