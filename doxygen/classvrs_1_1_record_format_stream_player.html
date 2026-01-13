@@ -94,21 +94,18 @@ Inheritance diagram for vrs::RecordFormatStreamPlayer:</div>
  <div class="center">
   <img src="classvrs_1_1_record_format_stream_player.png" usemap="#vrs::RecordFormatStreamPlayer_map" alt=""/>
   <map id="vrs::RecordFormatStreamPlayer_map" name="vrs::RecordFormatStreamPlayer_map">
-<area href="classvrs_1_1_stream_player.html" title="Class designed to receive record data when reading a VRS file." alt="vrs::StreamPlayer" shape="rect" coords="795,0,1050,24"/>
-<area href="classvrs_1_1_tags_record_player.html" title="StreamPlayer to decode the content of VRS tag records." alt="vrs::TagsRecordPlayer" shape="rect" coords="0,112,255,136"/>
-<area href="classvrs__sample__apps_1_1_audio_stream_player.html" title="Audio stream reader showing how to read records from a typical stream containing audio blocks." alt="vrs_sample_apps::AudioStreamPlayer" shape="rect" coords="265,112,520,136"/>
-<area href="classvrs__sample__apps_1_1_image_stream_player.html" title="Image stream reader showing how to read records from a typical stream containing images." alt="vrs_sample_apps::ImageStreamPlayer" shape="rect" coords="530,112,785,136"/>
-<area href="classvrs__sample__apps_1_1_motion_stream_player.html" title="Stream reader showing how to read records containing only metadata information in a DataLayout." alt="vrs_sample_apps::MotionStreamPlayer" shape="rect" coords="795,112,1050,136"/>
-<area href="classvrs__sample__code_1_1_image_player.html" title="Sample class to read images from a VRS file stream." alt="vrs_sample_code::ImagePlayer" shape="rect" coords="1060,112,1315,136"/>
-<area href="classvrs__sample__code_1_1_my_camera_stream_player.html" title="Class to consume records read from a file." alt="vrs_sample_code::MyCameraStreamPlayer" shape="rect" coords="1325,112,1580,136"/>
-<area href="classvrs__sample__code_1_1_stream_player_demo.html" title="Sample stream player to print metadata received from a stram." alt="vrs_sample_code::StreamPlayerDemo" shape="rect" coords="1590,112,1845,136"/>
+<area href="classvrs_1_1_stream_player.html" title="Class designed to receive record data when reading a VRS file." alt="vrs::StreamPlayer" shape="rect" coords="360,0,590,24"/>
+<area href="classvrs_1_1_tags_record_player.html" title="StreamPlayer to decode the content of VRS tag records." alt="vrs::TagsRecordPlayer" shape="rect" coords="0,112,230,136"/>
+<area href="classvrs__sample__apps_1_1_audio_stream_player.html" title="Audio stream reader showing how to read records from a typical stream containing audio blocks." alt="vrs_sample_apps::AudioStreamPlayer" shape="rect" coords="240,112,470,136"/>
+<area href="classvrs__sample__apps_1_1_image_stream_player.html" title="Image stream reader showing how to read records from a typical stream containing images." alt="vrs_sample_apps::ImageStreamPlayer" shape="rect" coords="480,112,710,136"/>
+<area href="classvrs__sample__apps_1_1_motion_stream_player.html" title="Stream reader showing how to read records containing only metadata information in a DataLayout." alt="vrs_sample_apps::MotionStreamPlayer" shape="rect" coords="720,112,950,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0a1b16d4ad7226eac26ebb119702d08f" id="r_a0a1b16d4ad7226eac26ebb119702d08f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvrs_1_1_record_format_stream_player.html#a0a1b16d4ad7226eac26ebb119702d08f">onDataLayoutRead</a> (const <a class="el" href="structvrs_1_1_current_record.html">CurrentRecord</a> &amp;record, size_t, <a class="el" href="classvrs_1_1_data_layout.html">DataLayout</a> &amp;)</td></tr>
-<tr class="separator:a0a1b16d4ad7226eac26ebb119702d08f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dc2e1a32c784918dc04130a88444026" id="r_a8dc2e1a32c784918dc04130a88444026"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvrs_1_1_record_format_stream_player.html#a8dc2e1a32c784918dc04130a88444026">onDataLayoutRead</a> (const <a class="el" href="structvrs_1_1_current_record.html">CurrentRecord</a> &amp;, size_t, <a class="el" href="classvrs_1_1_data_layout.html">DataLayout</a> &amp;)</td></tr>
+<tr class="separator:a8dc2e1a32c784918dc04130a88444026"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2612aa8a15eb18f5dcfab3af8e55ccba" id="r_a2612aa8a15eb18f5dcfab3af8e55ccba"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvrs_1_1_record_format_stream_player.html#a2612aa8a15eb18f5dcfab3af8e55ccba">onImageRead</a> (const <a class="el" href="structvrs_1_1_current_record.html">CurrentRecord</a> &amp;record, size_t blockIndex, const <a class="el" href="classvrs_1_1_content_block.html">ContentBlock</a> &amp;cb)</td></tr>
 <tr class="separator:a2612aa8a15eb18f5dcfab3af8e55ccba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa008310df0bdefe5e0c4ab28774d7022" id="r_aa008310df0bdefe5e0c4ab28774d7022"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvrs_1_1_record_format_stream_player.html#aa008310df0bdefe5e0c4ab28774d7022">onAudioRead</a> (const <a class="el" href="structvrs_1_1_current_record.html">CurrentRecord</a> &amp;record, size_t blockIndex, const <a class="el" href="classvrs_1_1_content_block.html">ContentBlock</a> &amp;cb)</td></tr>
@@ -383,8 +380,8 @@ map&lt; pair&lt; <a class="el" href="classvrs_1_1_stream_id.html">StreamId</a>, 
 
 </div>
 </div>
-<a id="a0a1b16d4ad7226eac26ebb119702d08f" name="a0a1b16d4ad7226eac26ebb119702d08f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a1b16d4ad7226eac26ebb119702d08f">&#9670;&#160;</a></span>onDataLayoutRead()</h2>
+<a id="a8dc2e1a32c784918dc04130a88444026" name="a8dc2e1a32c784918dc04130a88444026"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dc2e1a32c784918dc04130a88444026">&#9670;&#160;</a></span>onDataLayoutRead()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -396,7 +393,7 @@ map&lt; pair&lt; <a class="el" href="classvrs_1_1_stream_id.html">StreamId</a>, 
           <td class="memname">virtual bool vrs::RecordFormatStreamPlayer::onDataLayoutRead </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structvrs_1_1_current_record.html">CurrentRecord</a> &amp;&#160;</td>
-          <td class="paramname"><em>record</em>, </td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -475,7 +472,7 @@ map&lt; pair&lt; <a class="el" href="classvrs_1_1_stream_id.html">StreamId</a>, 
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Callback for image content blocks. The <a class="el" href="classvrs_1_1_content_block.html" title="Specification of a VRS record content block.">ContentBlock</a> object 'cb' describes the image content block, but the content block's data has not been read yet. Query the <a class="el" href="classvrs_1_1_content_block.html" title="Specification of a VRS record content block.">ContentBlock</a> object to know the details about the image and the content block's size. Then you can allocate or reuse a buffer, and call record.reader-&gt;read() to read the content block's data in that buffer. Depending on cb.image().getImageFormat(), the content block's data will be: <a class="el" href="namespacevrs.html#a7e8db761dcf6ba474ce112c82babb6c3a633d6abff0a3fc22404347728d195059" title="Raw pixel data.">ImageFormat::RAW</a>: raw pixel buffer data, in the format specified by cb.image.getPixelFormat(). <a class="el" href="namespacevrs.html#a7e8db761dcf6ba474ce112c82babb6c3a92769fe7c40229f4301d6125e0a9e928" title="JPEG data.">ImageFormat::JPG</a>: JPG data, as it found in a regular .jpg file. <a class="el" href="namespacevrs.html#a7e8db761dcf6ba474ce112c82babb6c3a55505ba281b015ec31f03ccb151b2a34" title="PNG data.">ImageFormat::PNG</a>: PNG data, as it found in a regular .png file. <a class="el" href="namespacevrs.html#a7e8db761dcf6ba474ce112c82babb6c3ae60ae31f67ab883c746bb71c7a145c18" title="Video codec encoded frame.">ImageFormat::VIDEO</a>: compressed data, as generated by the video codec cb.image.getCodecName(). Preferably, use a VideoRecordFormatStreamPlayer object to decode such records. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Callback for image content blocks. The <a class="el" href="classvrs_1_1_content_block.html" title="Specification of a VRS record content block.">ContentBlock</a> object 'cb' describes the image content block, but the content block's data has not been read yet. Query the <a class="el" href="classvrs_1_1_content_block.html" title="Specification of a VRS record content block.">ContentBlock</a> object to know the details about the image and the content block's size. Then you can allocate or reuse a buffer, and call record.reader-&gt;read() to read the content block's data in that buffer. Depending on cb.image().getImageFormat(), the content block's data will be: <a class="el" href="namespacevrs.html#a7e8db761dcf6ba474ce112c82babb6c3a633d6abff0a3fc22404347728d195059" title="Raw pixel data.">ImageFormat::RAW</a>: raw pixel buffer data, in the format specified by cb.image.getPixelFormat(). <a class="el" href="namespacevrs.html#a7e8db761dcf6ba474ce112c82babb6c3a92769fe7c40229f4301d6125e0a9e928" title="JPEG data.">ImageFormat::JPG</a>: JPG data, as it found in a regular .jpg file. <a class="el" href="namespacevrs.html#a7e8db761dcf6ba474ce112c82babb6c3a55505ba281b015ec31f03ccb151b2a34" title="PNG data.">ImageFormat::PNG</a>: PNG data, as it found in a regular .png file. <a class="el" href="namespacevrs.html#a7e8db761dcf6ba474ce112c82babb6c3ae60ae31f67ab883c746bb71c7a145c18" title="Video codec encoded images.">ImageFormat::VIDEO</a>: compressed data, as generated by the video codec cb.image.getCodecName(). Preferably, use a VideoRecordFormatStreamPlayer object to decode such records. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">record</td><td>Metadata associated with the record being read. </td></tr>
     <tr><td class="paramname">blockIndex</td><td>Index of the content block being read. </td></tr>
